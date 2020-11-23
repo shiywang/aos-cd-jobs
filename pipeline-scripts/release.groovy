@@ -731,7 +731,7 @@ def openCincinnatiPRs(releaseName, advisory, candidate_only = false,ghorg = 'ope
                     continue
                 }
 
-                withCredentials([string(credentialsId: 'openshift-bot-token', variable: 'access_token')]) {
+                withCredentials([string(credentialsId: 'shiywang-github-access-token', variable: 'access_token')]) {
                     def messageArgs = ''
                     for ( String msg : pr_messages ) {
                         messageArgs += "--message '${msg}' "
