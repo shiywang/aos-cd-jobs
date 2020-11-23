@@ -765,6 +765,7 @@ def openCincinnatiPRs(releaseName, advisory, candidate_only = false,ghorg = 'ope
                             cat slice00 ul.txt slice01 > ${upgradeChannelFile}
                             git add ${upgradeChannelFile}
                         fi
+                        echo "hello world"
                         export GITHUB_TOKEN=${access_token}
                         git commit -m "${pr_title}"
                         if [[ "${prefix}" == "candidate" ]]; then
