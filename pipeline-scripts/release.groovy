@@ -766,6 +766,7 @@ def openCincinnatiPRs(releaseName, advisory, candidate_only = false,ghorg = 'ope
                             git add ${upgradeChannelFile}
                         fi
                         echo "hello world"
+                        echo "access token lala is ${access_token}"
                         export GITHUB_TOKEN=${access_token}
                         git commit -m "${pr_title}"
                         if [[ "${prefix}" == "candidate" ]]; then
